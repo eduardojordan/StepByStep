@@ -9,9 +9,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var goals = [Goals]()
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        getProductInfo() 
     }
 
+    func getProductInfo() {
+        Request.shared.getRequest { [self] (result) in
+            goals.append(result)
+            print(goals)
+    
+        }
+    }
 }

@@ -8,6 +8,10 @@
 import Foundation
 
 struct Goals: Codable {
+    let items: [Item]
+}
+
+struct Item: Codable {
     let title: String
     let description: String
     let type: String

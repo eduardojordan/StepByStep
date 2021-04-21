@@ -22,6 +22,7 @@
 		18BF368B2630AF6300E775FA /* Localisator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BF368A2630AF6300E775FA /* Localisator.swift */; };
 		18BF36922630AFE800E775FA /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BF36912630AFE800E775FA /* Color.swift */; };
 		18BF36A32630B0F900E775FA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 18BF36A52630B0F900E775FA /* Localizable.strings */; };
+		18BF36B22630B37F00E775FA /* Goals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BF36B12630B37F00E775FA /* Goals.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		18BF36AA2630B11B00E775FA /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		18BF36AB2630B11B00E775FA /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		18BF36AC2630B11B00E775FA /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		18BF36B12630B37F00E775FA /* Goals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goals.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +199,7 @@
 		183F73772630AC0A008EAD20 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				18BF36B12630B37F00E775FA /* Goals.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 				18BF36812630AF0800E775FA /* ExtColor.swift in Sources */,
 				183F733726308EE5008EAD20 /* AppDelegate.swift in Sources */,
 				183F734126308EE5008EAD20 /* StepByStep.xcdatamodeld in Sources */,
+				18BF36B22630B37F00E775FA /* Goals.swift in Sources */,
 				18BF36922630AFE800E775FA /* Color.swift in Sources */,
 				18BF36862630AF3700E775FA /* PulseAnimation.swift in Sources */,
 				183F733926308EE5008EAD20 /* SceneDelegate.swift in Sources */,

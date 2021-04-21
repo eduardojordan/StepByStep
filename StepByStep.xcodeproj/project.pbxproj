@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		183F733726308EE5008EAD20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F733626308EE5008EAD20 /* AppDelegate.swift */; };
 		183F733926308EE5008EAD20 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F733826308EE5008EAD20 /* SceneDelegate.swift */; };
-		183F733B26308EE5008EAD20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F733A26308EE5008EAD20 /* ViewController.swift */; };
 		183F733E26308EE5008EAD20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 183F733C26308EE5008EAD20 /* Main.storyboard */; };
 		183F734126308EE5008EAD20 /* StepByStep.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 183F733F26308EE5008EAD20 /* StepByStep.xcdatamodeld */; };
 		183F734326308EE9008EAD20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 183F734226308EE9008EAD20 /* Assets.xcassets */; };
@@ -24,6 +23,17 @@
 		18BF36A32630B0F900E775FA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 18BF36A52630B0F900E775FA /* Localizable.strings */; };
 		18BF36B22630B37F00E775FA /* Goals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BF36B12630B37F00E775FA /* Goals.swift */; };
 		18BF36B82630B88800E775FA /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BF36B72630B88800E775FA /* Request.swift */; };
+		18BF36C02630C0D100E775FA /* GoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BF36BF2630C0D100E775FA /* GoalsViewController.swift */; };
+		18BF36C82630C16A00E775FA /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BF36C72630C16A00E775FA /* ProgressViewController.swift */; };
+		18BF36CF2630C2D000E775FA /* ExtTableViewGoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BF36CE2630C2D000E775FA /* ExtTableViewGoalsViewController.swift */; };
+		18BF36D42630C37100E775FA /* CellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BF36D32630C37100E775FA /* CellTableViewCell.swift */; };
+		18EED6402630CBD500CE20E7 /* Antonio-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18EED6392630CBD500CE20E7 /* Antonio-SemiBold.ttf */; };
+		18EED6412630CBD500CE20E7 /* Antonio-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18EED63A2630CBD500CE20E7 /* Antonio-Light.ttf */; };
+		18EED6422630CBD500CE20E7 /* Antonio-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18EED63B2630CBD500CE20E7 /* Antonio-Bold.ttf */; };
+		18EED6432630CBD500CE20E7 /* Antonio-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18EED63C2630CBD500CE20E7 /* Antonio-Medium.ttf */; };
+		18EED6442630CBD500CE20E7 /* Antonio-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18EED63D2630CBD500CE20E7 /* Antonio-Thin.ttf */; };
+		18EED6452630CBD500CE20E7 /* Antonio-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18EED63E2630CBD500CE20E7 /* Antonio-Regular.ttf */; };
+		18EED6462630CBD500CE20E7 /* Antonio-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18EED63F2630CBD500CE20E7 /* Antonio-ExtraLight.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +57,6 @@
 		183F733326308EE5008EAD20 /* StepByStep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StepByStep.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		183F733626308EE5008EAD20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		183F733826308EE5008EAD20 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		183F733A26308EE5008EAD20 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		183F733D26308EE5008EAD20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		183F734026308EE5008EAD20 /* StepByStep.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StepByStep.xcdatamodel; sourceTree = "<group>"; };
 		183F734226308EE9008EAD20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -73,6 +82,17 @@
 		18BF36AC2630B11B00E775FA /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		18BF36B12630B37F00E775FA /* Goals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goals.swift; sourceTree = "<group>"; };
 		18BF36B72630B88800E775FA /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		18BF36BF2630C0D100E775FA /* GoalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsViewController.swift; sourceTree = "<group>"; };
+		18BF36C72630C16A00E775FA /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
+		18BF36CE2630C2D000E775FA /* ExtTableViewGoalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtTableViewGoalsViewController.swift; sourceTree = "<group>"; };
+		18BF36D32630C37100E775FA /* CellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTableViewCell.swift; sourceTree = "<group>"; };
+		18EED6392630CBD500CE20E7 /* Antonio-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Antonio-SemiBold.ttf"; sourceTree = "<group>"; };
+		18EED63A2630CBD500CE20E7 /* Antonio-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Antonio-Light.ttf"; sourceTree = "<group>"; };
+		18EED63B2630CBD500CE20E7 /* Antonio-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Antonio-Bold.ttf"; sourceTree = "<group>"; };
+		18EED63C2630CBD500CE20E7 /* Antonio-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Antonio-Medium.ttf"; sourceTree = "<group>"; };
+		18EED63D2630CBD500CE20E7 /* Antonio-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Antonio-Thin.ttf"; sourceTree = "<group>"; };
+		18EED63E2630CBD500CE20E7 /* Antonio-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Antonio-Regular.ttf"; sourceTree = "<group>"; };
+		18EED63F2630CBD500CE20E7 /* Antonio-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Antonio-ExtraLight.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +199,13 @@
 		183F73742630AC01008EAD20 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				18EED63B2630CBD500CE20E7 /* Antonio-Bold.ttf */,
+				18EED63F2630CBD500CE20E7 /* Antonio-ExtraLight.ttf */,
+				18EED63A2630CBD500CE20E7 /* Antonio-Light.ttf */,
+				18EED63C2630CBD500CE20E7 /* Antonio-Medium.ttf */,
+				18EED63E2630CBD500CE20E7 /* Antonio-Regular.ttf */,
+				18EED6392630CBD500CE20E7 /* Antonio-SemiBold.ttf */,
+				18EED63D2630CBD500CE20E7 /* Antonio-Thin.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -194,7 +221,8 @@
 		183F73762630AC07008EAD20 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				183F733A26308EE5008EAD20 /* ViewController.swift */,
+				18BF36CC2630C27500E775FA /* Goals */,
+				18BF36CD2630C28800E775FA /* Progress */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -247,6 +275,24 @@
 				18BF36B72630B88800E775FA /* Request.swift */,
 			);
 			path = Request;
+			sourceTree = "<group>";
+		};
+		18BF36CC2630C27500E775FA /* Goals */ = {
+			isa = PBXGroup;
+			children = (
+				18BF36BF2630C0D100E775FA /* GoalsViewController.swift */,
+				18BF36CE2630C2D000E775FA /* ExtTableViewGoalsViewController.swift */,
+				18BF36D32630C37100E775FA /* CellTableViewCell.swift */,
+			);
+			path = Goals;
+			sourceTree = "<group>";
+		};
+		18BF36CD2630C28800E775FA /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+				18BF36C72630C16A00E775FA /* ProgressViewController.swift */,
+			);
+			path = Progress;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,11 +401,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18EED6452630CBD500CE20E7 /* Antonio-Regular.ttf in Resources */,
+				18EED6432630CBD500CE20E7 /* Antonio-Medium.ttf in Resources */,
+				18EED6402630CBD500CE20E7 /* Antonio-SemiBold.ttf in Resources */,
 				18BF36A32630B0F900E775FA /* Localizable.strings in Resources */,
+				18EED6422630CBD500CE20E7 /* Antonio-Bold.ttf in Resources */,
 				183F734626308EE9008EAD20 /* LaunchScreen.storyboard in Resources */,
+				18EED6412630CBD500CE20E7 /* Antonio-Light.ttf in Resources */,
+				18EED6442630CBD500CE20E7 /* Antonio-Thin.ttf in Resources */,
 				183F73792630AC91008EAD20 /* Images.xcassets in Resources */,
 				183F734326308EE9008EAD20 /* Assets.xcassets in Resources */,
 				183F733E26308EE5008EAD20 /* Main.storyboard in Resources */,
+				18EED6462630CBD500CE20E7 /* Antonio-ExtraLight.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,14 +459,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				18BF368B2630AF6300E775FA /* Localisator.swift in Sources */,
-				183F733B26308EE5008EAD20 /* ViewController.swift in Sources */,
 				18BF36812630AF0800E775FA /* ExtColor.swift in Sources */,
 				183F733726308EE5008EAD20 /* AppDelegate.swift in Sources */,
+				18BF36C82630C16A00E775FA /* ProgressViewController.swift in Sources */,
 				183F734126308EE5008EAD20 /* StepByStep.xcdatamodeld in Sources */,
+				18BF36CF2630C2D000E775FA /* ExtTableViewGoalsViewController.swift in Sources */,
 				18BF36B22630B37F00E775FA /* Goals.swift in Sources */,
 				18BF36922630AFE800E775FA /* Color.swift in Sources */,
+				18BF36D42630C37100E775FA /* CellTableViewCell.swift in Sources */,
 				18BF36B82630B88800E775FA /* Request.swift in Sources */,
 				18BF36862630AF3700E775FA /* PulseAnimation.swift in Sources */,
+				18BF36C02630C0D100E775FA /* GoalsViewController.swift in Sources */,
 				183F733926308EE5008EAD20 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

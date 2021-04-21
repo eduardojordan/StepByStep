@@ -73,5 +73,15 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Antonio-Bold.ttf</string>
+		<string>Antonio-ExtraLight.ttf</string>
+		<string>Antonio-Light.ttf</string>
+		<string>Antonio-Medium.ttf</string>
+		<string>Antonio-Regular.ttf</string>
+		<string>Antonio-SemiBold.ttf</string>
+		<string>Antonio-Thin.ttf</string>
+	</array>
 </dict>
 </plist>

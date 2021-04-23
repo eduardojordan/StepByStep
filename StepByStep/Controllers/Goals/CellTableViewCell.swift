@@ -8,10 +8,33 @@
 import UIKit
 
 class CellTableViewCell: UITableViewCell {
-
+    
+    @IBOutlet weak var lblTitle: UILabel!
+    @IBOutlet weak var lblDescription: UILabel!
+    @IBOutlet weak var lblType: UILabel!
+    @IBOutlet weak var lblGoal: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-       
+        setupCell()
+    }
+    
+    func setupCell() {
+        self.lblTitle.font = UIFont(name: "Antonio-Bold", size: 22)
+        self.lblGoal.font = UIFont(name: "Antonio-Bold", size: 25)
+        self.lblType.font = UIFont(name: "Antonio-Thin", size: 15)
+        self.lblDescription.font = UIFont(name: "Antonio-Thin", size: 15)
+        
+        self.lblTitle.textColor = .black
+        self.lblGoal.textColor = .black
+        self.lblType.textColor = .black
+        self.lblDescription.textColor = .black
+        
+        if lblType.text != "steps"{
+            lblType.text = "Km"
+        }
+        
+        self.selectionStyle = .none
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -6,34 +6,51 @@
 //
 
 import UIKit
+import Reachability
 
-class GoalsViewController: UIViewController {
+class GoalsViewController: UIViewController, UINavigationBarDelegate {
 
     @IBOutlet weak var tableView: UITableView!
-    var goals = [Goals]()
+
+    var goals = [Item]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getProductInfo()
-      
+        getGoalsData()
+        setupNavigationBar()
+        setupTableView()
     }
     
-    func getProductInfo() {
-        Request.shared.getRequest { [self] (result) in
-            goals.append(result)
-            print(goals)
+    func setupNavigationBar() {
+        self.title = localizedString("text_goals")
+        self.navigationController!.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Antonio-Bold", size: 22)!, NSAttributedString.Key.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.barTintColor = .black
+        
+    }
     
+    func setupTableView() {
+        tableView.rowHeight = 110
+        tableView.separatorStyle = .none
+    }
+    
+    func getGoalsData() {
+        Request.shared.getRequest { [self] (result) in
+            goals.append(contentsOf: result.items)
+            DispatchQueue.main.async {
+                tableView.reloadData()
+            }
+          
         }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
+//    if ReachabilityManager
+//
+//
+//if !(ReachabilityManager.shared.isReachable()) {
+//    print("")
+////        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+////        let notNetViewcontroller = storyboard.instantiateViewController(withIdentifier: "NotConectionNetViewController")
+////        self.navigationController!.pushViewController(notNetViewcontroller, animated: true)
+//    }
 
 }

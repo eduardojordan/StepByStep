@@ -28,7 +28,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z2Q-ie-uGZ">
-                                                    <rect key="frame" x="240" y="41" width="154" height="21"/>
+                                                    <rect key="frame" x="232" y="41" width="162" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -59,7 +59,7 @@
                                                 <constraint firstItem="sSx-91-a57" firstAttribute="top" secondItem="Ib9-Fv-smy" secondAttribute="topMargin" constant="5" id="MOI-gU-cRs"/>
                                                 <constraint firstItem="9be-IR-vfU" firstAttribute="trailing" secondItem="Ib9-Fv-smy" secondAttribute="trailingMargin" id="QAU-uE-Thj"/>
                                                 <constraint firstItem="Z2Q-ie-uGZ" firstAttribute="trailing" secondItem="Ib9-Fv-smy" secondAttribute="trailingMargin" id="TxR-wc-9Qu"/>
-                                                <constraint firstItem="Z2Q-ie-uGZ" firstAttribute="leading" secondItem="1gm-s6-HNw" secondAttribute="trailing" constant="33" id="UvB-2s-xw3"/>
+                                                <constraint firstItem="Z2Q-ie-uGZ" firstAttribute="leading" secondItem="1gm-s6-HNw" secondAttribute="trailing" constant="25" id="UvB-2s-xw3"/>
                                                 <constraint firstItem="Z2Q-ie-uGZ" firstAttribute="top" secondItem="9be-IR-vfU" secondAttribute="bottom" id="cua-3f-1lt"/>
                                                 <constraint firstItem="sSx-91-a57" firstAttribute="leading" secondItem="Ib9-Fv-smy" secondAttribute="leadingMargin" id="sb6-FO-M3w"/>
                                                 <constraint firstItem="1gm-s6-HNw" firstAttribute="top" secondItem="sSx-91-a57" secondAttribute="bottom" id="tTf-vS-oca"/>
@@ -201,7 +201,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="HMR-c3-tDR" kind="relationship" relationship="viewControllers" id="Jdp-cj-iVD"/>
@@ -212,12 +212,12 @@
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="88.392857142857139"/>
         </scene>
-        <!--GOALS-->
+        <!--Navigation Controller-->
         <scene sceneID="0ji-iH-1W2">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HMR-c3-tDR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="GOALS" id="zgQ-1e-n0W">
-                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <tabBarItem key="tabBarItem" title="" id="zgQ-1e-n0W">
+                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kEK-HV-oGb">
@@ -233,11 +233,11 @@
             </objects>
             <point key="canvasLocation" x="795.6521739130435" y="-284.59821428571428"/>
         </scene>
-        <!--SCORE-->
+        <!--Navigation Controller-->
         <scene sceneID="v8m-sO-hex">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FLS-Qy-on6" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="SCORE" id="DzP-jc-hvd">
+                    <tabBarItem key="tabBarItem" title="" id="DzP-jc-hvd">
                         <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
                     <toolbarItems/>

@@ -19,13 +19,17 @@ class GoalsViewController: UIViewController, UINavigationBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
+        setupTabBar()
         setupTableView()
         
         ReachabilityManager.shared.addObserver(viewController: self)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         self.internetAvailable()
+        setupTabBar()
+//        self.tabBarController?.tabBar.items![0].selectedImage = UIImage(named: "shoeIcon")
     }
     
     func internetAvailable() {
@@ -46,8 +50,15 @@ class GoalsViewController: UIViewController, UINavigationBarDelegate {
     func setupNavigationBar() {
         self.title = localizedString("text_goals")
         self.navigationController!.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Antonio-Bold", size: 22)!, NSAttributedString.Key.foregroundColor: UIColor.white]
-        navigationController?.navigationBar.barTintColor = .black
+        navigationController?.navigationBar.barTintColor = Colors.BlueLight
         
+    }
+    
+    func setupTabBar() {
+        self.tabBarItem.title = localizedString("text_goals")
+        self.tabBarController?.tabBar.items?[0].image = UIImage(named: "trophyIcon4")
+        self.tabBarController?.tabBar.items?[1].image = UIImage(named: "shoeIcon5")
+        self.tabBarController?.tabBar.tintColor = Colors.BlueLight
     }
     
     func setupTableView() {

@@ -22,8 +22,6 @@ class ProgressViewController: UIViewController {
     var stepDataSource : [[String:String]]? = [] {
         didSet{
             DispatchQueue.main.async {
-//               self.activityIndicator.startAnimating()
-//               self.activityIndicator.isHidden = true
                 self.tableView.isHidden = false
                 self.tableView.reloadData()
             }
@@ -33,6 +31,7 @@ class ProgressViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
+        setupTabBar()
         HealthKitPermision()
         self.activityIndicator.startAnimating()
         self.activityIndicator.isHidden = false
@@ -43,7 +42,15 @@ class ProgressViewController: UIViewController {
     
     func setupNavigationBar() {
         self.title = localizedString("text_score")
-        self.navigationController!.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Antonio-Bold", size: 22)!]
+        self.navigationController!.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Antonio-Bold", size: 22)!, NSAttributedString.Key.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.barTintColor = Colors.BlueLight
+    }
+    
+    func setupTabBar() {
+        self.tabBarItem.title = localizedString("text_score")
+        self.tabBarController?.tabBar.items?[0].image = UIImage(named: "trophyIcon4")
+        self.tabBarController?.tabBar.items?[1].image = UIImage(named: "shoeIcon5")
+        self.tabBarController?.tabBar.tintColor = Colors.BlueLight
     }
     
     func HealthKitPermision(){

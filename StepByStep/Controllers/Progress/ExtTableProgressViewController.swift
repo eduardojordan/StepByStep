@@ -21,8 +21,8 @@ extension ProgressViewController: UITableViewDelegate, UITableViewDataSource {
         cell.textLabel?.text =  ((stepDataSource![indexPath.row] as AnyObject).object(forKey: "steps") as? String)! 
         cell.detailTextLabel?.text = (stepDataSource![indexPath.row] as AnyObject).object(forKey: "enddate") as? String
         
-        cell.textLabel?.font = UIFont(name: "Antonio-Thin", size: 13)
-        cell.detailTextLabel?.font = UIFont(name: "Antonio-Thin", size: 13)
+        cell.textLabel?.font = UIFont(name: "Antonio-Thin", size: 17)
+        cell.detailTextLabel?.font = UIFont(name: "Antonio-Thin", size: 17)
         
         return cell
     }

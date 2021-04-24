@@ -18,10 +18,8 @@ class GoalsViewController: UIViewController, UINavigationBarDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupNavigationBar()
         setupTableView()
-        
         
         ReachabilityManager.shared.addObserver(viewController: self)
     }
@@ -53,7 +51,7 @@ class GoalsViewController: UIViewController, UINavigationBarDelegate {
     }
     
     func setupTableView() {
-        tableView.rowHeight = 110
+        tableView.rowHeight = 80
         tableView.separatorStyle = .none
     }
     

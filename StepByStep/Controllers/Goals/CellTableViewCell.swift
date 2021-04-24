@@ -22,13 +22,15 @@ class CellTableViewCell: UITableViewCell {
     func setupCell() {
         self.lblTitle.font = UIFont(name: "Antonio-Bold", size: 22)
         self.lblGoal.font = UIFont(name: "Antonio-Bold", size: 25)
-        self.lblType.font = UIFont(name: "Antonio-Thin", size: 15)
-        self.lblDescription.font = UIFont(name: "Antonio-Thin", size: 15)
+        self.lblType.font = UIFont(name: "Antonio-Thin", size: 12)
+        self.lblDescription.font = UIFont(name: "Antonio-Thin", size: 12)
         
         self.lblTitle.textColor = .black
         self.lblGoal.textColor = .black
         self.lblType.textColor = .black
         self.lblDescription.textColor = .black
+        
+        self.selectionStyle = .none
            
     }
 

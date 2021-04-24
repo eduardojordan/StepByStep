@@ -24,7 +24,7 @@ extension GoalsViewController: UITableViewDelegate, UITableViewDataSource {
                
         cell!.lblTitle.text = goals[indexPath.row].title
         cell!.lblDescription.text = goals[indexPath.row].description
-        cell!.lblType.text = goals[indexPath.row].type
+        cell!.lblType.text = goals[indexPath.row].type.replacingOccurrences(of: "_", with: " ")
         cell!.lblGoal.text = String(goals[indexPath.row].goal)
         
         return cell!

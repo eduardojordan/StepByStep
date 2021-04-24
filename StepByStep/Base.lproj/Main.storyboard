@@ -79,18 +79,25 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Tvo-3W-Z6c"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="gNN-BF-oKo">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="RLB-3o-Fta" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="0y2-GF-Xo4"/>
+                            <constraint firstItem="gNN-BF-oKo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AO5-ew-GnJ"/>
                             <constraint firstItem="RLB-3o-Fta" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FIv-P6-htY"/>
+                            <constraint firstItem="gNN-BF-oKo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="XAQ-wg-u7Z"/>
                             <constraint firstItem="RLB-3o-Fta" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="YJf-xQ-WOV"/>
                             <constraint firstItem="RLB-3o-Fta" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="kkW-Ss-6MZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="OaT-2j-rwh"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="gNN-BF-oKo" id="UZg-Z8-c23"/>
                         <outlet property="tableView" destination="RLB-3o-Fta" id="9x0-QV-KI6"/>
                     </connections>
                 </viewController>

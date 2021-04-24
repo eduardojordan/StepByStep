@@ -12,6 +12,7 @@ struct Goals: Codable {
 }
 
 struct Item: Codable {
+    let id: String
     let title: String
     let description: String
     let type: String

@@ -31,8 +31,12 @@ class ReachabilityManager: NSObject {
     func addObserver(viewController: UIViewController) {
         self.viewController = viewController
         if (!isReachable()) {
-            print("NO INTERNET")
-//            viewController.showAlert(message: "no_internet_error_msg", buttonTitle: "accept")
+            let dialogMessage = UIAlertController(title: "Conection fail", message: "Not have internet conection", preferredStyle: .alert)
+            let buttonAction = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
+                             })
+            dialogMessage.addAction(buttonAction)
+            viewController.present(dialogMessage, animated: true, completion: nil)
+            
         }
         NotificationCenter.default.addObserver(self, selector: #selector(reachabilityChanged(note:)), name: .reachabilityChanged, object: reachability)
     }
@@ -53,10 +57,8 @@ class ReachabilityManager: NSObject {
                 print(TAG + "Reachable via Cellular")
             case .unavailable:
                 print(TAG + "Network not reachable")
-//                viewController?.showAlert(message: "no_internet_error_msg", buttonTitle: "accept")
             case .none:
                 print(TAG + "None")
-//                viewController?.showAlert(message: "no_internet_error_msg", buttonTitle: "accept")
             }
         }
     }

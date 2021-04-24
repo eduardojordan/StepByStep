@@ -78,6 +78,7 @@
 		183F735B26308EE9008EAD20 /* StepByStepUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepByStepUITests.swift; sourceTree = "<group>"; };
 		183F735D26308EE9008EAD20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		183F73782630AC91008EAD20 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		187C39C1263426FE00377B0C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		18BF36802630AF0800E775FA /* ExtColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtColor.swift; sourceTree = "<group>"; };
 		18BF36852630AF3700E775FA /* PulseAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseAnimation.swift; sourceTree = "<group>"; };
 		18BF368A2630AF6300E775FA /* Localisator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localisator.swift; sourceTree = "<group>"; };
@@ -377,6 +378,7 @@
 		E24A899A038155BB539DE3B3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				187C39C1263426FE00377B0C /* SystemConfiguration.framework */,
 				38E13749E682FC376810FC12 /* Pods_StepByStep.framework */,
 				CC56D64BC735AA2C7CF96F82 /* Pods_StepByStep_StepByStepUITests.framework */,
 				CDA19145C9097122B16453FA /* Pods_StepByStepTests.framework */,
@@ -395,7 +397,6 @@
 				183F732F26308EE5008EAD20 /* Sources */,
 				183F733026308EE5008EAD20 /* Frameworks */,
 				183F733126308EE5008EAD20 /* Resources */,
-				18BF36AD2630B1DC00E775FA /* Run SwiftLint */,
 				527D39F659009C1C41DB0E47 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
@@ -549,24 +550,6 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
-		};
-		18BF36AD2630B1DC00E775FA /* Run SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Run SwiftLint";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 		527D39F659009C1C41DB0E47 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;

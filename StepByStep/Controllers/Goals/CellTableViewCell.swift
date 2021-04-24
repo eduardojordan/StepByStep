@@ -29,12 +29,7 @@ class CellTableViewCell: UITableViewCell {
         self.lblGoal.textColor = .black
         self.lblType.textColor = .black
         self.lblDescription.textColor = .black
-        
-        if lblType.text != "steps"{
-            lblType.text = "Km"
-        }
-        
-        self.selectionStyle = .none
+           
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

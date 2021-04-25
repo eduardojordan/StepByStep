@@ -36,7 +36,7 @@ Create a model with struct and codable data model include in Swift language , al
 
 I chose MVC because it seemed to me according to the proposed exercise and it allows to see clearly the adaptation of the code
 
-Use Core Data for data persistence in an outer class to reuse if necessary keeping SOLID principles.
+Use CoreData for data persistence in an outer class to reuse if necessary keeping SOLID principles.
 
 Use Postman to verify the data call to the endPoint and check types.
 

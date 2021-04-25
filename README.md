@@ -2,6 +2,7 @@
 ![alt text](http://url/to/CapturaStep.jpg)
 
 
+
 # StepByStep
 Its a practice of iOS app with HealthKit Apple framework for obtain the number of step daily from our mobile device. Too can obtain a list from of the endpoint of  metrics of effort
 

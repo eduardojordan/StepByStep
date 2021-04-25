@@ -1,4 +1,5 @@
 
+![alt text](http://url/to/CapturaStep.jpg)
 
 
 # StepByStep

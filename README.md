@@ -1,5 +1,5 @@
 
-![image](CapturaStep.jpg)
+![image](CapturaApp.jpg)
 
 
 # StepByStep

@@ -49,7 +49,7 @@ class CoredataManager {
         }
     }
     
-    func retrieveLocalData(array: [Item]) {
+    func retrieveLocalData(array: [Item]) -> Void {
         var array = [Item]()
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         let managedContex = appDelegate.persistentContainer.viewContext

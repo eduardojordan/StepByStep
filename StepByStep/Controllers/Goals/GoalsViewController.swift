@@ -20,26 +20,23 @@ class GoalsViewController: UIViewController, UINavigationBarDelegate {
         super.viewDidLoad()
         setupNavigationBar()
         setupTableView()
-        
         ReachabilityManager.shared.addObserver(viewController: self)
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        internetAvailable()
         setupTabBar()
+        internetAvailable()
+
+      
     }
     
     func internetAvailable() {
         if !(ReachabilityManager.shared.isReachable()) {
-            self.activityIndicator.startAnimating()
-            self.activityIndicator.isHidden = false
-            CoredataManager.shared.retrieveLocalData(array: self.goals)
-            DispatchQueue.main.async {
-                self.activityIndicator.stopAnimating()
-                self.activityIndicator.isHidden = true
-            }
+            self.getLocalData()
         } else {
             self.activityIndicator.startAnimating()
+            self.activityIndicator.isHidden = false
             self.getServerData()
         }
     }
@@ -72,6 +69,17 @@ class GoalsViewController: UIViewController, UINavigationBarDelegate {
                 self.activityIndicator.isHidden = true
                 self.tableView.reloadData()
             }
+        }
+    }
+    
+    func getLocalData() {
+        self.activityIndicator.startAnimating()
+        self.activityIndicator.isHidden = false
+        CoredataManager.shared.retrieveLocalData(array: self.goals)
+        DispatchQueue.main.async {
+            self.activityIndicator.stopAnimating()
+            self.activityIndicator.isHidden = true
+            self.tableView.reloadData()
         }
     }
     

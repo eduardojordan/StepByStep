@@ -10,8 +10,7 @@ import XCTest
 
 class StepByStepTests: XCTestCase {
 
-
-    
+  
     func testParseJsonFile() throws {
         guard let pathString = Bundle.main.path(forResource: "Goals", ofType: "json")else {
             fatalError("json not found")
@@ -22,7 +21,7 @@ class StepByStepTests: XCTestCase {
         let jsonData = json.data(using: .utf8)!
         let item = try JSONDecoder().decode(Goals.self, from: jsonData)
         XCTAssertEqual("Easy walk steps", item.items[0].title)
-       
+
    }
 
 }

@@ -93,8 +93,6 @@ class HealthKitAssistant {
                         
                         steps = Int(quantity.doubleValue(for: HKUnit.count()))
                         
-                        print("DataStore Steps = \(steps)")
-                        
                         tempDic = [
                             "enddate" : "\(dateFormatter.string(from: endDate))",
                             "steps"   : "\(steps)"

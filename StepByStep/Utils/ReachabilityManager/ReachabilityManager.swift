@@ -36,8 +36,7 @@ class ReachabilityManager: NSObject {
                              })
             dialogMessage.addAction(buttonAction)
             viewController.present(dialogMessage, animated: true, completion: nil)
-            
-        }
+        } 
         NotificationCenter.default.addObserver(self, selector: #selector(reachabilityChanged(note:)), name: .reachabilityChanged, object: reachability)
     }
     

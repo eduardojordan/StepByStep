@@ -19,11 +19,10 @@
 		183F735C26308EE9008EAD20 /* StepByStepUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F735B26308EE9008EAD20 /* StepByStepUITests.swift */; };
 		183F73792630AC91008EAD20 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 183F73782630AC91008EAD20 /* Images.xcassets */; };
 		18797F4C26347639000B2DB1 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18797F4B26347639000B2DB1 /* HealthKit.framework */; };
-		18797F51263476BB000B2DB1 /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18797F50263476BB000B2DB1 /* HealthKitManager.swift */; };
 		18797F5626348153000B2DB1 /* HealthKitAssistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18797F5526348153000B2DB1 /* HealthKitAssistant.swift */; };
 		18797F63263482C8000B2DB1 /* ExtTableProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18797F62263482C8000B2DB1 /* ExtTableProgressViewController.swift */; };
+		189418B7263584EC00AFF2FD /* CoredataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189418B6263584EC00AFF2FD /* CoredataManager.swift */; };
 		18BF36812630AF0800E775FA /* ExtColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BF36802630AF0800E775FA /* ExtColor.swift */; };
-		18BF36862630AF3700E775FA /* PulseAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BF36852630AF3700E775FA /* PulseAnimation.swift */; };
 		18BF368B2630AF6300E775FA /* Localisator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BF368A2630AF6300E775FA /* Localisator.swift */; };
 		18BF36922630AFE800E775FA /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BF36912630AFE800E775FA /* Color.swift */; };
 		18BF36A32630B0F900E775FA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 18BF36A52630B0F900E775FA /* Localizable.strings */; };
@@ -84,12 +83,11 @@
 		183F73782630AC91008EAD20 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		18797F4A26347639000B2DB1 /* StepByStep.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StepByStep.entitlements; sourceTree = "<group>"; };
 		18797F4B26347639000B2DB1 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
-		18797F50263476BB000B2DB1 /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
 		18797F5526348153000B2DB1 /* HealthKitAssistant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitAssistant.swift; sourceTree = "<group>"; };
 		18797F62263482C8000B2DB1 /* ExtTableProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtTableProgressViewController.swift; sourceTree = "<group>"; };
 		187C39C1263426FE00377B0C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		189418B6263584EC00AFF2FD /* CoredataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoredataManager.swift; sourceTree = "<group>"; };
 		18BF36802630AF0800E775FA /* ExtColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtColor.swift; sourceTree = "<group>"; };
-		18BF36852630AF3700E775FA /* PulseAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseAnimation.swift; sourceTree = "<group>"; };
 		18BF368A2630AF6300E775FA /* Localisator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localisator.swift; sourceTree = "<group>"; };
 		18BF36912630AFE800E775FA /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		18BF36992630B09100E775FA /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
@@ -252,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				183F733F26308EE5008EAD20 /* StepByStep.xcdatamodeld */,
+				189418B6263584EC00AFF2FD /* CoredataManager.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -294,8 +293,6 @@
 			children = (
 				18BF36CC2630C27500E775FA /* Goals */,
 				18BF36CD2630C28800E775FA /* Progress */,
-				18797F50263476BB000B2DB1 /* HealthKitManager.swift */,
-				18797F5526348153000B2DB1 /* HealthKitAssistant.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -310,6 +307,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		18797F702634DD1A000B2DB1 /* HealthKit */ = {
+			isa = PBXGroup;
+			children = (
+				18797F5526348153000B2DB1 /* HealthKitAssistant.swift */,
+			);
+			path = HealthKit;
+			sourceTree = "<group>";
+		};
 		18BF367E2630AEA700E775FA /* Strings */ = {
 			isa = PBXGroup;
 			children = (
@@ -322,9 +327,9 @@
 		18BF367F2630AEDD00E775FA /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				18797F702634DD1A000B2DB1 /* HealthKit */,
 				18EED6582630D09900CE20E7 /* ReachabilityManager */,
 				18EED6522630D05300CE20E7 /* MockupJson */,
-				18BF36852630AF3700E775FA /* PulseAnimation.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -653,6 +658,7 @@
 			files = (
 				18BF368B2630AF6300E775FA /* Localisator.swift in Sources */,
 				18BF36812630AF0800E775FA /* ExtColor.swift in Sources */,
+				189418B7263584EC00AFF2FD /* CoredataManager.swift in Sources */,
 				1839AC4F2632BD3B009745FC /* ReachabilityManager.swift in Sources */,
 				183F733726308EE5008EAD20 /* AppDelegate.swift in Sources */,
 				18BF36C82630C16A00E775FA /* ProgressViewController.swift in Sources */,
@@ -661,10 +667,8 @@
 				1839AC8C2632C2F0009745FC /* ExtNSObject.swift in Sources */,
 				18BF36B22630B37F00E775FA /* Goals.swift in Sources */,
 				18BF36922630AFE800E775FA /* Color.swift in Sources */,
-				18797F51263476BB000B2DB1 /* HealthKitManager.swift in Sources */,
 				18BF36D42630C37100E775FA /* CellTableViewCell.swift in Sources */,
 				18BF36B82630B88800E775FA /* Request.swift in Sources */,
-				18BF36862630AF3700E775FA /* PulseAnimation.swift in Sources */,
 				18BF36C02630C0D100E775FA /* GoalsViewController.swift in Sources */,
 				183F733926308EE5008EAD20 /* SceneDelegate.swift in Sources */,
 				18797F63263482C8000B2DB1 /* ExtTableProgressViewController.swift in Sources */,

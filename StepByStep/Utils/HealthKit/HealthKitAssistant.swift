@@ -18,22 +18,10 @@ private enum HealthkitSetupError: Error {
 
 class HealthKitAssistant {
     
-    ///////////////////////////
-    //Shared Variable
-    ///////////////////////////
-    
     static let shared = HealthKitAssistant()
-    
-    
-    ///////////////////////////
-    //Healthkit store object
-    ///////////////////////////
-    
+
     let healthKitStore = HKHealthStore()
     
-    ////////////////////////////////////
-    //MARK: Permission block
-    ////////////////////////////////////
     func getHealthKitPermission(completion: @escaping (Bool) -> Void) {
         
         guard HKHealthStore.isHealthDataAvailable() else {
@@ -68,15 +56,8 @@ class HealthKitAssistant {
         }
     }
     
-    
-    
-    //////////////////////////////////////////////////////
-    //MARK: - Get Recent step Data
-    //////////////////////////////////////////////////////
-    
     func getMostRecentStep(for sampleType: HKQuantityType, completion: @escaping (_ stepRetrieved: Int, _ stepAll : [[String : String]]) -> Void) {
         
-        // Use HKQuery to load the most recent samples.
         let mostRecentPredicate =  HKQuery.predicateForSamples(withStart: Date.distantPast, end: Date(), options: .strictStartDate)
         
         var interval = DateComponents()
@@ -87,7 +68,7 @@ class HealthKitAssistant {
         stepQuery.initialResultsHandler = { query, results, error in
             
             if error != nil {
-                //  Something went Wrong
+
                 return
             }
             if let myResults = results {
@@ -99,8 +80,6 @@ class HealthKitAssistant {
                 myResults.enumerateStatistics(from: Date.distantPast, to: Date()) {
                     
                     statistics, stop in
-                    
-                    //Take Local Variable
                     
                     if let quantity = statistics.sumQuantity() {
                         

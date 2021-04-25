@@ -8,3 +8,6 @@
 
 "text_goals" = "GOALS";
 "text_score" = "STEPS";
+
+"text_title_alert" = "No internet connection";
+"text_msg_alert" = "The table of goal values will be updated when you have internet again, meanwhile the data obtained is stored on your device";

@@ -10,12 +10,11 @@ import HealthKit
 
 
 class ProgressViewController: UIViewController {
-
+    
     @IBOutlet weak var lblStepToday: UILabel!
     @IBOutlet weak var lblSteps: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    
     
     var todayStep = Int()
     
@@ -32,12 +31,9 @@ class ProgressViewController: UIViewController {
         super.viewDidLoad()
         setupNavigationBar()
         setupTabBar()
+        setupInitialLoad()
         HealthKitPermision()
-        self.activityIndicator.startAnimating()
-        self.activityIndicator.isHidden = false
-        self.tableView.isHidden = true
-        
-  
+    
     }
     
     func setupNavigationBar() {
@@ -53,14 +49,19 @@ class ProgressViewController: UIViewController {
         self.tabBarController?.tabBar.tintColor = Colors.BlueLight
     }
     
+    func setupInitialLoad() {
+        self.activityIndicator.startAnimating()
+        self.activityIndicator.isHidden = false
+        self.tableView.isHidden = true
+    }
+    
     func HealthKitPermision(){
         HealthKitAssistant.shared.getHealthKitPermission { (response) in
             self.loadMostRecentSteps()
         }
     }
-
+    
     func loadMostRecentSteps()  {
-        
         guard let stepsdata = HKQuantityType.quantityType(forIdentifier: .stepCount) else { return }
         HealthKitAssistant.shared.getMostRecentStep(for: stepsdata) { (steps , stepsData) in
             self.todayStep = steps
@@ -70,11 +71,11 @@ class ProgressViewController: UIViewController {
                 self.activityIndicator.isHidden = true
                 self.lblStepToday.text = "\(self.todayStep)"
                 self.lblStepToday.font  = UIFont(name: "Antonio-Bold", size: 70)
-                self.lblSteps.text = "Steps"
+                self.lblSteps.text = localizedString("text_score")
                 self.lblSteps.font  = UIFont(name: "Antonio-Thin", size: 20)
             }
         }
     }
     
-
+    
 }

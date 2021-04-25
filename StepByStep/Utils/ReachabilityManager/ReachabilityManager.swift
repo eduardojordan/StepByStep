@@ -31,7 +31,7 @@ class ReachabilityManager: NSObject {
     func addObserver(viewController: UIViewController) {
         self.viewController = viewController
         if (!isReachable()) {
-            let dialogMessage = UIAlertController(title: "Conection fail", message: "Not have internet conection", preferredStyle: .alert)
+            let dialogMessage = UIAlertController(title: localizedString("text_title_alert"), message: localizedString("text_msg_alert"), preferredStyle: .alert)
             let buttonAction = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
                              })
             dialogMessage.addAction(buttonAction)

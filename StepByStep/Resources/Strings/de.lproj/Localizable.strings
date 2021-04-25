@@ -8,3 +8,6 @@
 
 "text_goals" = "TORE";
 "text_score" = "SCHRITTE";
+
+"text_title_alert" = "Keine Internetverbindung";
+"text_msg_alert" = "Die Tabelle der Zielwerte wird aktualisiert, wenn Sie wieder über das Internet verfügen. Währenddessen werden die erhaltenen Daten auf Ihrem Gerät gespeichert";

@@ -7,3 +7,9 @@
 */
 "text_goals" = "METAS";
 "text_score" = "PASOS";
+
+"text_title_alert" = "No dispone de conección a internet";
+"text_msg_alert" = "La tabla de valores de metas se actualizará cuando tengas internet nuevamente, mientras tanto los datos obtenidos se almacenan en tu dispositivo.";
+
+
+

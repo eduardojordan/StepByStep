@@ -66,11 +66,12 @@ class CoredataManager {
                                 type: data.value(forKey: "type") as! String,
                                 goal: data.value(forKey: "goal") as! Int,
                                 reward: Reward(trophy: data.value(forKey: "trophy") as! String,
-                                               points: data.value(forKey: "points") as! Int)))
+                                points: data.value(forKey: "points") as! Int)))
             }
         } catch {
             print("Failed retrieve Data",error.localizedDescription)
         }
+        
     }
     
     func updateLocalData() {

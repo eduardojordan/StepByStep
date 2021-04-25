@@ -27,8 +27,7 @@ class GoalsViewController: UIViewController, UINavigationBarDelegate {
     override func viewWillAppear(_ animated: Bool) {
         setupTabBar()
         internetAvailable()
-
-      
+        
     }
     
     func internetAvailable() {

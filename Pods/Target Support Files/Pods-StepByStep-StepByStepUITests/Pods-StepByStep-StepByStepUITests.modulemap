@@ -1,0 +1,6 @@
+framework module Pods_StepByStep_StepByStepUITests {
+  umbrella header "Pods-StepByStep-StepByStepUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
